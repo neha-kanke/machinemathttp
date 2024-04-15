@@ -1,0 +1,12 @@
+<h1 class="text-center">
+    Add posts
+    <button mat-mini-fab (click)="onadd()">
+        <mat-icon>add</mat-icon>
+    </button>
+</h1>
+<ng-container *ngIf="postarr.length>0;else data">
+    <app-post-card   [postobj] ='post'*ngFor="let post of postarr"  (editemitdata)="onemidata($event)" (delteemidid)="ondeltepost($event)"></app-post-card>
+</ng-container>
+<ng-template #data>
+    <p class="alert alert-primary">now post is not avaiable  here !!</p>
+</ng-template>

@@ -1,0 +1,13 @@
+
+<mat-card class="mb-3 bg-info text-black" >
+<mat-card-title>
+    {{postobj.title}}
+</mat-card-title>
+<mat-card-content>
+<p>{{postobj.body}}</p>
+</mat-card-content>
+<mat-card-actions class="d-flex justify-content-between">
+    <button mat-raised-button color="primary" (click)="oneditpost()">Edit</button>
+    <button mat-raised-button color="warn" (click)="ondeltepost()">Delete</button>
+</mat-card-actions>
+</mat-card>

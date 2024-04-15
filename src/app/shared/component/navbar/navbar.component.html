@@ -1,0 +1,17 @@
+<mat-sidenav #sidenav>
+    <mat-nav-list>
+        <a routerLink="/posts" mat-list-item (click)="sidenav.close()"><span>posts</span></a>
+    </mat-nav-list>
+</mat-sidenav>
+<mat-toolbar color="primary" class="d-flex justify-content-between">
+    <div>
+        <button mat-icon-button (click)="sidenav.open()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <a routerLink="posts"><span>posts</span></a>
+
+    </div>
+    <div>
+        <button mat-raised-button color="warn">LogOut</button>
+    </div>
+</mat-toolbar>

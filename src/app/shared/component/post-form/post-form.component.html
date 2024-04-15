@@ -1,0 +1,21 @@
+<h3  class="text-center">{{iseditmode?'UpdatePost':'Addpost'}}</h3>
+<form [formGroup]="postform" (ngSubmit)="onaddpost()">
+<div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" formControlName="title">
+</div>
+<div class="form-group">
+    <label for="body">Content</label>
+    <input type="text" class="form-control" formControlName="body">
+</div>
+<div class="form-group">
+    <label for="userid">UserId</label>
+    <select name="userid" id="userid" formControlName="userid" class="form-control">
+    <option [value]="user" *ngFor="let user of userarr">{{user}}</option>
+   </select>
+</div>
+<div class="text-right">
+    <button mat-raised-button color="accent" *ngIf="!iseditmode">AddPost</button>
+    <button mat-raised-button color="accent" type="button" *ngIf="iseditmode" (click)="onupdatedata()">UpdatePost</button>
+</div>
+</form>
